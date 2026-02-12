@@ -1,6 +1,14 @@
 {% extends 'empApp/base.html' %} {% load crispy_forms_tags %}{%block content%}
 <form action="" method="post" autocomplete="off">
   {% csrf_token %} {{ form|crispy }}
-  <button type="submit" class="btn btn-success">Submit</button>
+  <div class="d-flex gap-2">
+    <button type="submit" class="btn btn-success flex-fill">
+      <i class="fa fa-database"></i> Submit
+    </button>
+
+    <a href="{% url 'employeeList' %}" class="btn btn-secondary flex-fill">
+      <i class="fas fa-stream"></i> Back to the list
+    </a>
+  </div>
 </form>
 {% endblock content %}
