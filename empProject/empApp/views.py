@@ -3,8 +3,6 @@ from .forms import Employee_form
 from .models import Employee
 
 # Create your views here.
-from django.shortcuts import render
-from .models import Employee
 
 def employeeList(request):
     employees = Employee.objects.all()
