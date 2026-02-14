@@ -1,4 +1,5 @@
-from django.urls import path, include
+
+from django.urls import path
 from . import views
 
 urlpatterns = [
@@ -6,5 +7,5 @@ urlpatterns = [
     path('<int:id>/', views.employeeForm, name='employeeUpdate'),
     path('delete/<int:id>/', views.employeeDelete, name='employeeDelete'),
     path('list/', views.employeeList, name='employeeList'),
-]  
+]
 

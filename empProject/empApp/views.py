@@ -27,7 +27,7 @@ def employeeList(request):
     employees = Employee.objects.all()
     return render(request, 'empApp/employeeList.html', {'employeeList': employees})
 
-def employeeDelete(request,id):
+def employeeDelete(request, id):
     employee = Employee.objects.get(pk=id)
     employee.delete()
     return redirect('/employee/list')
